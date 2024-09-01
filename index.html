@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        /* body{
+            background-image: url(back.jpg);
+        } */
+        .link
+        {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: rgb(48, 48, 48);
+            color: rgb(186, 186, 186);
+            justify-content: stretch;
+            padding: 0.5em;
+            align-items: flex-end;
+        
+        }
+        .nav
+        {
+            background-color: aliceblue;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 1em;
+            
+        }
+        
+        img{
+            max-width: 100%;
+        }
+        
+        .nav img{
+            min-width: 100%;
+        }
+        .photo
+        {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        .home
+        {
+            margin-left: 2.5%;
+            
+            padding: 1.25em;
+        }
+        .home:hover{
+            background-color: rgb(17, 227, 17);
+            color: aliceblue;
+            border: 1px rgb(65, 59, 59) solid;
+        }
+
+       .back
+       {
+        background-image: url(window.jpg);
+        background-repeat: no-repeat;
+        background-position:  center;
+       }
+       .row
+       {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap:1em;
+        text-align: center;
+        width: 75%;
+        margin: auto;
+       }
+      .col
+      {
+        margin: 5rem 0 ;
+        background-color: rgb(249, 249, 249);
+        text-align: center;
+        line-height: 2.5em;
+      }
+      .col p{
+        padding: 1.5em;
+      }
+      .col h2
+      {
+        padding-top: 1em;
+        background-color: rgb(189, 192, 192);
+      }
+      .col div
+      {
+        background-color: rgb(45, 160, 43);
+        color: rgb(243, 243, 243);
+      }
+      .col:hover 
+      {
+        transform: translateY(-10px); 
+        background-color: #ffffff; 
+      }
+      .last
+      {
+        width: 75%;
+        margin: auto;
+        padding: 1.75em 0 1.75em 0;
+      }
+      .row1
+      {
+        display: flex;
+        flex-wrap: nowrap;
+        gap:1em;
+        text-align: center;
+
+      }
+      .back1
+      {
+        background-image: url(window.jpg);
+        background-position: center;
+      }
+      
+     .back11
+     {
+        margin-top: 2em;
+        color: rgb(255, 255, 255);
+        /* background-color: rgb(127, 125, 125); */
+     }
+     .back11 p{
+        PADDING: 1EM;
+     }
+     .back11 h2
+     {
+        padding-top: 8.5em;
+        line-height: 1.5em;
+
+     }
+    .back11 button{
+        border: 0.5px rgb(5, 132, 1) solid;
+        color: rgba(9, 255, 9, 0.397);
+        background-color: rgb(26, 36, 30);
+        margin-bottom: 1em;
+
+    }
+    .col1 img
+    {
+        min-width: 100%;
+        
+    }
+    .imgflex
+    {
+        display: flex;
+        text-align: start;
+    }
+    .imgflex p,button,h3
+    {
+        margin-left: 1em;
+    }
+    .imgflex img{
+        border: 1px double black;
+    }
+    .imgflex button
+    {
+        border: green 1px solid;
+        color: green;
+    }
+    .end
+    {
+        background-color: rgb(193, 193, 193);
+        text-align: center;
+    }
+    .end h2{
+        padding-top: 2em;
+    }
+    .end p{
+        padding-bottom: 2em;
+    }
+    .foot
+    {
+        display: flex;
+        width: 75%;
+        margin: auto;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+    .footb
+    {
+        background-image: url(window.jpg);
+        background-position: center;
+    }
+
+   .footb h3{
+    margin-left: 50%;
+    
+   }
+   .para
+   {
+    background-color: orange;
+    color: white;
+    text-align: start;
+    padding: 0.75em;
+   }
+   .para1
+   {
+    background-color: rgb(33, 163, 199);
+    color: white;
+    text-align: start;
+    padding: 0.75em;
+   }
+   .para input
+   {
+    border: 1px rgb(255, 255, 255) solid;
+    background-color:orange;
+    margin: 1em 0;
+    padding: 0.25em;
+    color: white;
+    
+   }
+   .para1 input{
+    background-color: rgb(33, 163, 199);
+    border:  1px rgb(255, 255, 255) solid;
+    margin: 1em 0;
+    padding: 0.25em;
+    color: white;
+   }
+   .info
+   {
+    background-color: rgb(26, 25, 25);
+    color: white;
+   }
+   .info1
+   {
+    display: flex;
+    width: 75%;
+    margin: auto;
+    gap:5rem;
+    line-height: 2rem;
+    justify-content: space-evenly;
+   }
+   .colinfo div
+   {
+        color: greenyellow;
+   }
+   .colinfo input{
+    border: 1px black solid;
+    background-color: rgb(43, 71, 1);
+    color: white;
+    padding: 0.5em 1.5em;
+    margin-top: 2em;
+   }
+
+   /* @media (max-width: 768px) {
+    .row,row1 {
+        flex-direction: row;
+    }
+
+    col {
+        margin: 10px 0;
+    } */
+    </style>
+</head>
+<body>
+    <header class="link">
+            <div style="margin-left: 20%;">LINK1|</div>
+            <div>LINK2|</div>
+            <div>LINK3|</div>
+            <div>LINK4|</div>
+            <div>LINK5</div>
+            <div style="margin-left: 20%;">123456789|</div>
+            <div>INFO@DOMAIN.COM</div>
+    </header>
+
+    <header class="nav">
+        <div class="photo"><img src="FOMIC.png" alt=""></div>
+        <div class="home">HOME</div>
+        <div class="home">PAGES</div>
+        <div class="home">DROPDOWN</div>
+        <div class="home">LINK TEXT</div>
+        <div class="home">LINK TEXT</div>
+    </header>
+
+    
+    <main class="back">
+        <div class="row">
+            <div class="col">
+                <h2>QUISQUE VEHICULA URNA AMET </h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, cum dolorum! Unde at tempore aliquam, cum quisquam eligendi delectus voluptates!</p>
+                <div>READ MORE</div>
+            </div>
+            <div class="col">
+                <h2>ALUQUAM PURUS URNA PORTA FACUIBUS</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque dolorem ullam atque, voluptatibus necessitatibus vero non maiores doloremque voluptas? Quod.</p>
+                <div>READ MORE</div>
+            </div>
+            <div class="col">
+                <h2>PROIN ULTRACIES DUI LEO ECESTAS AUGUE</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum labore aliquam et possimus consequuntur itaque eaque sed voluptatum nobis odit.</p>
+                <div>READ MORE</div>
+            </div>
+        </div>
+    </main>
+
+
+    <main class="last">
+        <div class="row1">
+            <div class="col1">
+                <div>MAECENAS LIBERO NUNC ERAT</div>
+                <div class="back1">
+                    <div class="back11">
+                        <h2>URNASIT AMET PULVINAR</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, optio?</p>
+                        <button>read more></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col1">
+                <div>ETILAM EROS NULLA POUERE</div>
+                <div class="imgflex">
+                    <div style="margin-top: 2em;">
+                        <img src="img.png" alt="">
+                    </div>
+                    <div style="padding-top: 2em;">
+                        <h3>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, beatae.</p>
+                        <button>read more</button>
+        
+                    </div>
+                    
+                </div>
+                <hr>
+                <br>
+                <div class="imgflex">
+                    <div>
+                        <img src="img.png" alt="">
+                    </div>
+                    <div>
+                        <h3>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, beatae.</p>
+                        <button>read more</button>
+                    </div>
+                </div>
+                <hr>
+                <br>
+                <div class="imgflex">
+                    <div>
+                        <img src="img.png" alt="">
+                    </div>
+                    <div>
+                        <h3>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, beatae.</p>
+                        <button>read more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="end">
+        <h2>DONEC FACUIBUS VOLUPAT NEC EGESTAS</h2>
+        <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus quis debitis reprehenderit hic placeat mollitia</P>
+        
+        <div class="foot">
+           <div class="footb">
+                <h3 class="para">
+                    <DIV>QUISQUE VEHICULAR URNA AMET PULVINAR DAPIBUS</DIV>
+                    <input type="button" value="READ MORE">
+                </h3>
+           </div>
+           <div class="footb">
+                <h3 class="para1">
+                    <div>INTEGER VEHICULAR URNA AMET PULVINAR DAPIBUS</div>
+                    <input type="button" value="READ MORE">
+                </h3>
+           </div>
+        </div>
+        <br><br>
+    </footer>
+
+
+    <footer class="info">
+        <div class="info1">
+            <div class="colinfo">
+                <div style="color: white;">Quick Link</div>  
+                <div>Home</div>
+                <div>Blog</div>               
+                <div>Gallery</div>
+                <div>Portfolio</div>
+                <div>Contact us</div>
+            </div>
+            <div class="colinfo">
+                <div style="color: white;">KEEP IN TOUCH</div>
+                <input type="email" value="email" placeholder="Email" required><br>
+                <input type="button" value="submit">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
